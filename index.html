@@ -15,124 +15,135 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Styles copied from Kishan's index.html -->
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0a192f; /* bg-navy */
-        }
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #252525; /* New: Warm Dark Gray */
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .text-teal {
-            color: #64ffda;
-        }
-        
-        .bg-navy {
-            background-color: #0a192f;
-        }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .text-teal {
+        color: #FCA311; /* New: Bright Orange Accent */
+    }
+    
+    .bg-navy {
+        background-color: #252525; /* New: Warm Dark Gray */
+    }
 
-        .bg-light-navy {
-            background-color: #112240;
-        }
-        
-        .border-teal {
-            border-color: #64ffda;
-        }
+    .bg-light-navy {
+        background-color: #3B3B3B; /* New: Lighter Gray */
+    }
+    
+    .border-teal {
+        border-color: #FCA311; /* New: Bright Orange Accent */
+    }
 
-        .nav-link {
-            transition: color 0.3s, transform 0.3s;
-        }
+    .nav-link {
+        transition: color 0.3s, transform 0.3s;
+    }
 
-        .nav-link:hover {
-            color: #64ffda;
-            transform: translateY(-2px);
-        }
-        
-        .resume-button {
-             transition: background-color 0.3s, color 0.3s;
-        }
+    .nav-link:hover {
+        color: #FCA311; /* New: Bright Orange Accent */
+        transform: translateY(-2px);
+    }
+    
+    .resume-button {
+         transition: background-color 0.3s, color 0.3s;
+    }
 
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: #112240; /* bg-light-navy */
-        }
+    .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #3B3B3B; /* New: Lighter Gray */
+    }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
-        }
-        
-        /* Timeline style copied */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -30px; /* Adjust based on pl-10 */
-            top: 5px; /* Align with text */
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #64ffda; /* teal */
-            border: 3px solid #0a192f; /* navy background */
-        }
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
+    }
+    
+    /* Timeline style */
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -30px; /* Adjust based on pl-10 */
+        top: 5px; /* Align with text */
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #FCA311; /* New: Bright Orange Accent */
+        border: 3px solid #252525; /* New: Warm Dark Gray */
+    }
 
-        /* Fixed Side Elements copied */
+    /* Fixed Side Elements */
+    .side-element {
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        display: none; /* Hidden by default */
+    }
+
+    @media (min-width: 1024px) { /* Show only on large screens (lg breakpoint) */
         .side-element {
-            position: fixed;
-            bottom: 0;
-            z-index: 10;
-            display: none; /* Hidden by default */
-        }
-
-        @media (min-width: 1024px) { /* Show only on large screens (lg breakpoint) */
-            .side-element {
-                display: block;
-            }
-        }
-
-        .left-sidebar {
-            left: 40px;
-            right: auto;
-            width: 40px;
-        }
-
-        .right-sidebar {
-            right: 40px;
-            left: auto;
-            width: 40px;
-        }
-
-        .sidebar-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .sidebar-content::after {
-            content: "";
             display: block;
-            width: 1px;
-            height: 90px;
-            background-color: #8892b0; /* text-gray-400 equivalent */
-            margin-top: 20px;
         }
-        
-        .email-link {
-            writing-mode: vertical-rl;
-            color: #8892b0; /* text-gray-400 equivalent */
-            font-family: 'Poppins', sans-serif;
-            letter-spacing: 0.1em;
-            font-size: 14px;
-            transition: color 0.3s, transform 0.3s;
-        }
-        .email-link:hover {
-            color: #64ffda;
-            transform: translateY(-3px);
-        }
-        /* No need for placeholder style now */
-    </style>
+    }
+
+    .left-sidebar {
+        left: 40px;
+        right: auto;
+        width: 40px;
+    }
+
+    .right-sidebar {
+        right: 40px;
+        left: auto;
+        width: 40px;
+    }
+
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sidebar-content::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 90px;
+        background-color: #C5C5C5; /* New: Light Gray Text */
+        margin-top: 20px;
+    }
+    
+    .email-link {
+        writing-mode: vertical-rl;
+        color: #C5C5C5; /* New: Light Gray Text */
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.1em;
+        font-size: 14px;
+        transition: color 0.3s, transform 0.3s;
+    }
+    .email-link:hover {
+        color: #FCA311; /* New: Bright Orange Accent */
+        transform: translateY(-3px);
+    }
+
+    /* ---- IMPORTANT: Overriding Tailwind Classes ---- */
+    /* This adds the hover/marker colors for the new theme */
+
+    .hover\:bg-teal\/10:hover {
+         /* New: Orange with 10% opacity */
+        background-color: rgba(252, 163, 17, 0.1) !important;
+    }
+    
+    .marker\:text-teal::marker {
+        color: #FCA311 !important; /* New: Bright Orange Accent */
+    }
+</style>
 </head>
 
 <body class="bg-navy text-gray-300">
@@ -405,5 +416,6 @@
 </body>
 
 </html>
+
 
 
