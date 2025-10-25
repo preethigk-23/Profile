@@ -131,16 +131,7 @@
             color: #64ffda;
             transform: translateY(-3px);
         }
-        /* Style for placeholder image */
-        .profile-image-placeholder {
-            background-color: #112240; /* bg-light-navy */
-            color: #64ffda; /* text-teal */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+        /* No need for placeholder style now */
     </style>
 </head>
 
@@ -220,11 +211,9 @@
                             <a href="#projects" class="border border-teal text-teal font-medium py-3 px-8 rounded-md hover:bg-teal/10 transition duration-300">Check out my work!</a>
                         </div>
                     </div>
-                    <!-- Profile Image Placeholder -->
+                    <!-- Profile Image - Updated by User -->
                     <div class="md:w-2/5 mt-10 md:mt-0 flex justify-center reveal">
-                         <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-teal shadow-2xl profile-image-placeholder">
-                             PG
-                         </div>
+                         <!-- Removed placeholder div, added img tag with user's path -->
                          <img src="Preethi_img.jpeg" alt="Preethi GK" class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-teal shadow-2xl">
                     </div>
                 </div>
@@ -279,10 +268,11 @@
             </div>
         </section>
 
-        <!-- Projects Section - Updated Content for Preethi -->
+        <!-- Projects Section - Updated Content for Preethi & Blockchain project included -->
         <section id="projects" class="py-24">
             <div class="container mx-auto px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-100 reveal">Things I've Built</h2>
+                <!-- Project Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Project 1: Disaster Management -->
                     <div class="project-card rounded-lg shadow-lg p-6 flex flex-col justify-between reveal">
@@ -291,7 +281,6 @@
                                 <i class="far fa-folder-open text-teal text-3xl"></i>
                                 <div class="space-x-4">
                                     <!-- Add GitHub link if available -->
-                                    <!-- <a href="#" class="nav-link text-gray-400 text-xl"><i class="fab fa-github"></i></a> -->
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-100 hover:text-teal transition-colors"><a href="#">Disaster Management System</a></h3>
@@ -305,7 +294,7 @@
                             <div class="flex justify-between items-center mb-4">
                                 <i class="far fa-folder-open text-teal text-3xl"></i>
                                 <div class="space-x-4">
-                                     <!-- Add GitHub link if available -->
+                                     <a href="https://github.com/preethigk23/Sign-Language-Interpreter-using-Deep-Learning" target="_blank" class="nav-link text-gray-400 text-xl"><i class="fab fa-github"></i></a>
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-100 hover:text-teal transition-colors"><a href="#">Hand Gesture Recognition</a></h3>
@@ -327,8 +316,21 @@
                         </div>
                         <p class="text-sm text-gray-500 font-mono mt-4">Bootstrap, HTML, CSS, React, Database</p>
                     </div>
-                    <!-- Add more project cards if needed -->
-                </div>
+                     <!-- Project 4: Blockchain Charity Platform - Re-added -->
+                    <div class="project-card rounded-lg shadow-lg p-6 flex flex-col justify-between reveal">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <i class="far fa-folder-open text-teal text-3xl"></i>
+                                <div class="space-x-4">
+                                     <a href="https://github.com/preethigk23/Blockchain-based-Charity-Donation-Platform" target="_blank" class="nav-link text-gray-400 text-xl"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-100 hover:text-teal transition-colors"><a href="https://github.com/preethigk23/Blockchain-based-Charity-Donation-Platform" target="_blank">Blockchain Charity Platform</a></h3>
+                            <p class="text-gray-400 mb-4">A decentralized application facilitating transparent and secure charity donations using blockchain technology.</p>
+                        </div>
+                        <p class="text-sm text-gray-500 font-mono mt-4">Solidity, React, Web3.js, Ethereum</p> <!-- Assuming tech stack -->
+                    </div>
+                </div> <!-- End Project Grid -->
             </div>
         </section>
         
@@ -389,5 +391,4 @@
 </body>
 
 </html>
-
 
